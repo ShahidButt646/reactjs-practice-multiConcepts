@@ -1,37 +1,36 @@
-import * as actionTypes from "./actions.js"
+import * as actionTypes from "../actions/actions.js"
 
 const initialState = {
-    counter: 3
+    counter: 0,
 }
-const rootReducer = (state = initialState, action) => {
+const counterReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case actionTypes.ADD:
             return {
+
                 counter: state.counter + action.value
             };
-            break;
         case actionTypes.SUBTRACT:
             return {
+
                 counter: state.counter - action.value
             };
-            break;
         case actionTypes.MULTIPLY:
             return {
+
                 counter: state.counter * action.value
             };
-            break;
         case actionTypes.DIVIDE:
             return {
+
                 counter: state.counter / action.value
             };
-            break;
         case actionTypes.RESET:
             return {
                 counter: 0
             };
-            break;
-
+        // i do have to create two reset functions one to reset counter, one to reset storeresult
         default:
             return state;
 
@@ -39,4 +38,4 @@ const rootReducer = (state = initialState, action) => {
 
 }
 
-export default rootReducer;
+export default counterReducer;

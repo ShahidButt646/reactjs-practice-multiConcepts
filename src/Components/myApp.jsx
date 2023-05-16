@@ -1,11 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import * as actionTypes from "../Store/actions.js"
+import * as actionTypes from "../Store/actions/actions.js"
 
 const MyApp = (props) => {
-    useEffect(() => {
-        console.log("my app rendered");
-    });
+
     return (
         <>
             <header className="App-header">
@@ -46,7 +44,25 @@ const MyApp = (props) => {
                     >
                         Reset
                     </button>
+                    <button
+
+                        onClick={() => props.onStoreResult(props.ctr)}
+                    >
+                        Store Result
+                    </button>
                 </div>
+                <ul>
+                    {
+                        props.srR.map((elm) => (
+                            <li
+                                onClick={() => props.onDeleteResult(elm.id)}
+                                key={elm.id}
+                            >
+                                {elm.counter}
+                            </li>
+                        ))
+                    }
+                </ul>
 
             </header>
 
@@ -54,9 +70,10 @@ const MyApp = (props) => {
     )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
-        ctr: state.counter
+        ctr: state.ctr.counter,
+        srR: state.resR.storeResult,
     }
 }
 const mapDispatchToProps = dispatch => {
@@ -65,8 +82,9 @@ const mapDispatchToProps = dispatch => {
         onSub: () => dispatch({ type: actionTypes.SUBTRACT, value: 1 }),
         onMul: () => dispatch({ type: actionTypes.MULTIPLY, value: 2 }),
         onDiv: () => dispatch({ type: actionTypes.DIVIDE, value: 2 }),
+        onStoreResult: (res) => dispatch({ type: actionTypes.STORE_RESULT, result: res }),
+        onDeleteResult: (id) => dispatch({ type: actionTypes.DELETE_RESULT, deleteResultId: id }),
         onReset: () => dispatch({ type: actionTypes.RESET }),
-
 
     }
 }
