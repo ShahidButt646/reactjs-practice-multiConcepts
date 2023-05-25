@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import counterReducer from "./store/reducers/counter.js";
-import resultReducer from "./store/reducers/resultcap.js";
+import resultReducer from "./store/reducers/Result.js";
 
 
 const rootReducer = combineReducers({
