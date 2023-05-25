@@ -4,7 +4,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import counterReducer from "./store/reducers/countercap.js";
+import counterReducer from "./store/reducers/Counter.js";
 import resultReducer from "./store/reducers/Result.js";
 
 
