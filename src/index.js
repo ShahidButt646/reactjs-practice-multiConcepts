@@ -4,8 +4,8 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import counterReducer from "./Store/reducers/counter.js";
-import resultReducer from "./Store/reducers/result.js";
+import counterReducer from "./store/reducers/counter.js";
+import resultReducer from "./store/reducers/result.js";
 
 
 const rootReducer = combineReducers({

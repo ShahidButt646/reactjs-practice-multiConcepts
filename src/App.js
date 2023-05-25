@@ -1,6 +1,6 @@
 import React from 'react';
-import MyApp from './Components/MyApp';
-import EffectUnderstanding from "./Components/UseEffectUnderstanding"
+import MyApp from './components/ReduxApp';
+import EffectUnderstanding from "./components/UseEffectWorking"
 
 
 
