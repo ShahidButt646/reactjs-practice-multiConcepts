@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actionTypes from "../store/actions/actions.js"
+import * as actionTypes from "../store/actions/actionscap.js"
 
 const MyApp = (props) => {
 
