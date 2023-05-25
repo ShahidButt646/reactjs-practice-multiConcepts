@@ -1,6 +1,6 @@
 import React from 'react';
-import MyApp from './Components/myApp';
-import EffectUnderstanding from "./Components/useEffectUnderstanding"
+import MyApp from './Components/MyApp';
+import EffectUnderstanding from "./Components/UseEffectUnderstanding"
 
 
 
